@@ -101,17 +101,37 @@ let ucetambolunenler,
   tekraredensayilar;
 
 // 3a çözümü
+  enkucuk = sayilar[0];
+  enbuyuk = sayilar[0];
+for(let i = 1; i < sayilar.length; i++){
 
-/* kodlar buraya */
+  if(sayilar[i] > enbuyuk[i]){
+    enbuyuk = sayilar[i]
+  }
+  
+  if(sayilar[i] < enkucuk[i]){
+    enkucuk = sayilar[i]
+  }
+  
+}
+console.log(enbuyuk)
 
 // 3b çözümü:
-
-/* kodlar buraya */
+ucetambolunenler = [];
+sayilar.forEach(sayi => {
+  if(sayi % 3 === 0){
+    ucetambolunenler.push(sayi)
+  }
+});
+console.log(ucetambolunenler)
 
 // 3c çözümü:
 
-/* kodlar buraya */
+ucebolunenlerintoplami = ucetambolunenler.reduce((toplam,sayi) => {
+  return toplam + sayi
+}, 0);
 
+console.log(ucebolunenlerintoplami);
 // 3d çözümü
 
 /* kodlar buraya */
