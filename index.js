@@ -134,16 +134,38 @@ ucebolunenlerintoplami = ucetambolunenler.reduce((toplam,sayi) => {
 console.log(ucebolunenlerintoplami);
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar = sayilar.filter((sayi)=> {
+  return sayi < 500;
+})
+
+console.log(besyuzdenkucuksayilar);
 
 // 3e çözümü
-
-/* kodlar buraya */
+siralisayilar = [];
+besyuzdenkucuksayilar.sort((a,b) => a - b)
+siralisayilar.push(...besyuzdenkucuksayilar)
+console.log(siralisayilar);
 
 // 3f çözümü
 
-/* kodlar buraya */
+tekraredensayilar = [];
+let sayiTekrarlari = {};
 
+sayilar.forEach((sayi) => {
+  if (sayiTekrarlari[sayi] === undefined) {
+      sayiTekrarlari[sayi] = 1;
+  } else {
+      sayiTekrarlari[sayi]++;
+  }
+});
+for (let sayi in sayiTekrarlari) {
+  let tekrarSayisi = sayiTekrarlari[sayi];
+  if (tekrarSayisi > 1) {
+      let tekrarString = `${sayi} sayısı ${tekrarSayisi} kere tekrar edilmiştir`; 
+      tekraredensayilar.push(tekrarString);
+  }
+}
+console.log(tekraredensayilar);
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
 function sa() {
